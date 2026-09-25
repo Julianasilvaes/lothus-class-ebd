@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lothus Class — Gestão para Escola Bíblica Dominical</title>
+  <meta name="description" content="Centralize classes, professores, alunos, chamada, visitantes, frequência, conteúdos e engajamento em uma única plataforma.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Lothus Class" class="logo__img">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#acompanhamento">Acompanhamento</a>
+        <a href="#perguntas">Perguntas</a>
+        <a href="#contato">Contato</a>
+        <a href="#contato" class="btn btn--primary btn--small">Conheça a plataforma</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">GESTÃO PARA ESCOLA BÍBLICA DOMINICAL</p>
+          <h1>Uma EBD mais organizada. Uma rotina mais simples para quem ensina.</h1>
+          <p class="lead">Centralize classes, professores, alunos, chamada, visitantes, frequência, conteúdos e engajamento em uma única plataforma.</p>
+          <a href="#contato" class="btn btn--primary">Conheça o Lothus Class</a>
+          <p class="hero__note">Uma plataforma flexível que se adapta à rotina da Escola Bíblica Dominical.</p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="mock-card">
+            <div class="mock-card__topbar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+
+            <div class="mock-card__tabs" id="mockTabs">
+              <button type="button" data-panel="painel" class="is-active">Painel</button>
+              <button type="button" data-panel="alunos">Alunos</button>
+              <button type="button" data-panel="chamada">Chamada</button>
+              <button type="button" data-panel="agenda">Agenda</button>
+            </div>
+
+            <div class="mock-card__body" id="mockPanels">
+
+              <div class="mock-panel is-active" data-panel="painel">
+                <h3>Painel da EBD</h3>
+                <div class="stat-grid">
+                  <div class="stat-tile"><span class="stat-tile__value">8</span><span class="stat-tile__label">Classes</span></div>
+                  <div class="stat-tile"><span class="stat-tile__value">126</span><span class="stat-tile__label">Alunos</span></div>
+                  <div class="stat-tile"><span class="stat-tile__value">92%</span><span class="stat-tile__label">Frequência</span></div>
+                  <div class="stat-tile"><span class="stat-tile__value">6</span><span class="stat-tile__label">Professores</span></div>
+                </div>
+                <table class="mock-table">
+                  <thead>
+                    <tr><th>Aluno</th><th>Classe</th><th>Status</th><th>Bíblia</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Marcos Silva</td><td>Adultos</td><td><span class="pill">Presente</span></td><td>✓</td></tr>
+                    <tr><td>Ana Costa</td><td>Jovens</td><td><span class="pill">Presente</span></td><td>✓</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="mock-panel" data-panel="alunos">
+                <h3>Alunos</h3>
+                <table class="mock-table">
+                  <thead>
+                    <tr><th>Aluno</th><th>Classe</th><th>Frequência</th><th>Ação</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Marcos Silva</td><td>Adultos</td><td>
+                      <div class="freq-bar-wrap"><span class="freq-bar"><span class="freq-bar__fill" style="width:92%"></span></span><span class="freq-bar__pct">92%</span></div>
+                    </td><td>Ver</td></tr>
+                    <tr><td>Ana Costa</td><td>Jovens</td><td>
+                      <div class="freq-bar-wrap"><span class="freq-bar"><span class="freq-bar__fill" style="width:88%"></span></span><span class="freq-bar__pct">88%</span></div>
+                    </td><td>Ver</td></tr>
+                    <tr><td>Lucas Mendes</td><td>Adolescentes</td><td>
+                      <div class="freq-bar-wrap"><span class="freq-bar-pct-only">71%</span></div>
+                    </td><td>Ver</td></tr>
+                    <tr><td>Raquel Lima</td><td>Adultos</td><td>
+                      <div class="freq-bar-wrap"><span class="freq-bar"><span class="freq-bar__fill" style="width:96%"></span></span><span class="freq-bar__pct">96%</span></div>
+                    </td><td>Ver</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="mock-panel" data-panel="chamada">
+                <h3>Chamada e frequência</h3>
+                <table class="mock-table">
+                  <thead>
+                    <tr><th>Aluno</th><th>Presença</th><th>Bíblia</th><th>Participação</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Marcos Silva</td><td><span class="pill">Presente</span></td><td>Sim</td><td>Alta</td></tr>
+                    <tr><td>Ana Costa</td><td><span class="pill">Presente</span></td><td>Sim</td><td>Média</td></tr>
+                    <tr><td>Lucas Mendes</td><td>Ausente</td><td>—</td><td>—</td></tr>
+                    <tr><td>Visitante</td><td><span class="pill">Visitante</span></td><td>Sim</td><td>Nova</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="mock-panel" data-panel="agenda">
+                <h3>Agenda</h3>
+                <table class="mock-table">
+                  <tbody>
+                    <tr><td>Domingo</td><td>Classe Adultos</td><td>09:00</td><td>Próxima aula</td></tr>
+                    <tr><td>Domingo</td><td>Jovens</td><td>09:00</td><td>Próxima aula</td></tr>
+                    <tr><td>Próxima aula</td><td>Adolescentes</td><td>09:00</td><td>Prof. Ana Costa</td></tr>
+                    <tr><td>Próxima aula</td><td>Adultos</td><td>09:00</td><td>Prof. Marcos Silva</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="funcionalidades" id="funcionalidades">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--pill">FUNCIONALIDADES</p>
+          <h2>Tudo o que sua EBD precisa acompanhar em uma mesma base.</h2>
+          <p class="section-sub">O Lothus Class conecta as principais áreas da rotina da Escola Bíblica Dominical, da classe do professor à visão da liderança.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="feature-card">
+            <span class="feature-card__num">01</span>
+            <h3>Alunos e classes</h3>
+            <p>Cadastros, responsáveis, classes, históricos e vínculos organizados em um só lugar.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__num">02</span>
+            <h3>Professores</h3>
+            <p>Organize professores, substituições, permissões e vínculos com cada classe.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__num">03</span>
+            <h3>Chamada e frequência</h3>
+            <p>Marque presença, falta, justificativas e acompanhe o histórico sem depender de papel.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__num">04</span>
+            <h3>Visitantes e itens da aula</h3>
+            <p>Registre visitantes e itens configuráveis como "trouxe a Bíblia", participação ou critérios próprios da EBD.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__num">05</span>
+            <h3>Conteúdos e atividades</h3>
+            <p>Centralize materiais, PDFs, links, quizzes, atividades e conteúdos de apoio para a turma.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__num">06</span>
+            <h3>Engajamento e comunicação</h3>
+            <p>Pontos, rankings, conquistas, desafios, avisos e notificações para fortalecer participação e vínculo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rotina-professor">
+      <div class="container rotina-professor__inner">
+        <div class="rotina-professor__content">
+          <p class="eyebrow eyebrow--pill">ROTINA DO PROFESSOR</p>
+          <h2>A chamada da EBD sem caderno, planilha ou retrabalho.</h2>
+          <p class="section-sub">O professor abre a aula do dia, registra a turma em poucos toques e o sistema transforma esse registro em informação para acompanhamento.</p>
+
+          <ul class="check-list">
+            <li>Presenças</li>
+            <li>Faltas</li>
+            <li>Visitantes</li>
+            <li>Trouxe a Bíblia</li>
+            <li>Participação</li>
+            <li>Relatórios</li>
+          </ul>
+
+          <a href="#contato" class="btn btn--primary">Conheça a plataforma</a>
+        </div>
+
+        <div class="rotina-professor__visual" aria-hidden="true">
+          <div class="info-card">
+            <h3>Chamada da classe · Adultos</h3>
+            <p>Professor registra a aula e a frequência é atualizada automaticamente. Itens extras podem pontuar e alimentar os relatórios da EBD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="acompanhamento" id="acompanhamento">
+      <div class="container">
+        <div class="section-head section-head--light">
+          <p class="eyebrow eyebrow--pill-light">ACOMPANHAMENTO</p>
+          <h2>O aluno começou a faltar. Sua EBD percebe?</h2>
+          <p class="section-sub section-sub--light">O afastamento pode começar aos poucos. Ter frequência e histórico organizados ajuda professor e liderança a perceberem sinais antes que a ausência vire rotina.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card"><span class="step-card__num">1</span><p>Falta uma aula</p></div>
+          <div class="step-card"><span class="step-card__num">2</span><p>Falta novamente</p></div>
+          <div class="step-card"><span class="step-card__num">3</span><p>Perde o ritmo</p></div>
+          <div class="step-card"><span class="step-card__num">4</span><p>Se afasta da classe</p></div>
+        </div>
+
+        <p class="acompanhamento__note">Não é sobre prometer que ninguém vai faltar. É sobre dar à EBD informação para perceber o que está acontecendo e agir com mais cuidado e organização.</p>
+
+        <div class="risk-card">
+          <div class="risk-card__stat">
+            <span class="risk-card__value">3+</span>
+            <p class="risk-card__label">faltas seguidas</p>
+          </div>
+          <div>
+            <h3>Risco de afastamento</h3>
+            <p>O painel pode destacar alunos com faltas consecutivas e situações que merecem acompanhamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="organizacao">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--pill">ORGANIZAÇÃO</p>
+          <h2>Mais classes e professores não deveriam significar mais confusão.</h2>
+          <p class="section-sub">À medida que a EBD cresce, depender de cadernetas, mensagens e controles separados torna o acompanhamento mais difícil.</p>
+        </div>
+
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h3>Antes · controles separados</h3>
+            <ul>
+              <li>Faltas ficam espalhadas entre cadernetas e mensagens.</li>
+              <li>Visitantes podem ser registrados sem histórico consolidado.</li>
+              <li>Cada professor organiza informações do seu próprio jeito.</li>
+              <li>A liderança precisa juntar dados manualmente para entender a EBD.</li>
+            </ul>
+          </div>
+          <div class="compare-card compare-card--highlight">
+            <h3>Depois · com Lothus Class</h3>
+            <ul>
+              <li>Frequência, faltas e histórico reunidos por aluno e classe.</li>
+              <li>Visitantes e itens da chamada registrados dentro da mesma rotina.</li>
+              <li>Professores trabalham em uma estrutura única e simples.</li>
+              <li>A liderança acompanha classes e indicadores em uma visão organizada.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <a href="#contato" class="btn btn--primary">Conheça o Lothus Class</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="perguntas" id="perguntas">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--pill">PERGUNTAS</p>
+          <h2>Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              O Lothus Class atende somente EBD?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Não. O Lothus Class atende diferentes operações educacionais, de professores e escolas a instituições maiores. Na EBD, a plataforma pode ser aplicada à rotina de classes, professores, alunos e congregações.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              O professor consegue fazer a chamada pelo celular?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sim. A chamada foi desenhada para ser rápida e pode registrar presença, falta e itens configuráveis da instituição.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              É possível acompanhar alunos que estão faltando?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sim. A plataforma consolida frequência e pode sinalizar faltas consecutivas e queda de presença para acompanhamento.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Posso registrar visitantes?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sim. O material funcional do Lothus Class prevê registro de visitantes dentro da rotina de chamada e relatórios administrativos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              O sistema atende mais de uma congregação?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sim. A arquitetura multiunidade permite separar unidades ou congregações e manter uma visão consolidada da operação.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Consigo usar conteúdos, atividades e quizzes?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sim. O professor pode trabalhar com biblioteca de conteúdos, atividades, quizzes, avaliações e recursos online dentro da plataforma.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--pill">CONHEÇA O LOTHUS CLASS</p>
+          <h2>Sua EBD pode crescer sem aumentar o peso da rotina.</h2>
+          <p class="section-sub">Mais organização para o professor. Mais visão para a liderança. Mais acompanhamento para os alunos.</p>
+          <p class="section-sub">Veja como o Lothus Class pode organizar sua Escola Bíblica Dominical.</p>
+        </div>
+
+        <div class="section-cta">
+          <a href="https://wa.me/5598991008367" target="_blank" rel="noopener" class="btn btn--primary btn--large">Quero conhecer a plataforma</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo logo--footer">
+        <img src="assets/logo.png" alt="Lothus Class" class="logo__img">
+      </a>
+      <p class="footer__tagline">Tecnologia que traduz inovação em educação.</p>
+      <a href="#" class="footer__link">Política de privacidade</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
